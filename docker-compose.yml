@@ -1,0 +1,16 @@
+version: "3"
+services:
+  weibo-rss:
+    image: einverne/weibo-rss
+    container_name: weibo-rss
+    restart: always
+    ports:
+      - "80:3000"
+    environment:
+      VIRTUAL_HOST: wb.einverne.info
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
+
