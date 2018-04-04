@@ -6,9 +6,12 @@ services:
     restart: always
     expose:
       - 80
+      - 443
     environment:
       VIRTUAL_HOST: wb.einverne.info
       VIRTUAL_PORT: 3000
+      LETSENCRYPT_HOST: wb.einverne.info
+      LETSENCRYPT_EMAIL: admin@einverne.info
 
 networks:
   default:
